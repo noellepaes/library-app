@@ -1,19 +1,28 @@
-<h2 class="text-2xl font-bold mb-4">Persons</h2>
-    <table class="min-w-full bg-white">
-      <thead>
-        <tr>
-          <th class="py-2">Name</th>
-          <th class="py-2">CPF</th>
-          <th class="py-2">Fined</th>
-          <th class="py-2">Allowed to Borrow</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let person of persons" class="text-center">
-          <td class="py-2">{{ person.name }}</td>
-          <td class="py-2">{{ person.cpf }}</td>
-          <td class="py-2">{{ person.fined ? 'Yes' : 'No' }}</td>
-          <td class="py-2">{{ person.allowedBorrow ? 'Yes' : 'No' }}</td>
-        </tr>
-      </tbody>
-    </table>
+<!-- persons-list.component.html -->
+<div class="flex justify-between items-center mb-4">
+  <h2 class="text-2xl font-semibold">Persons</h2>
+  <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Person</button>
+</div>
+<table class="min-w-full bg-white shadow rounded-lg overflow-hidden">
+  <thead class="bg-gray-200">
+    <tr>
+      <th class="py-2 px-4">CPF</th>
+      <th class="py-2 px-4">Name</th>
+      <th class="py-2 px-4">Fined</th>
+      <th class="py-2 px-4">Allowed</th>
+      <th class="py-2 px-4">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of persons" class="border-b">
+      <td class="py-2 px-4">{{ p.cpf }}</td>
+      <td class="py-2 px-4">{{ p.name }}</td>
+      <td class="py-2 px-4">{{ p.fined ? 'Yes' : 'No' }}</td>
+      <td class="py-2 px-4">{{ p.allowedBorrow ? 'Yes' : 'No' }}</td>
+      <td class="py-2 px-4 space-x-2">
+        <button class="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600">Edit</button>
+        <button class="bg-red-500   text-white px-2 py-1 rounded hover:bg-red-600">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
