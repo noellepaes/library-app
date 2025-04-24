@@ -1,1 +1,58 @@
-<p>persons-form works!</p>
+<div class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+  <h2 class="text-2xl font-semibold mb-6">
+    {{ isEditing ? 'Editar Pessoa' : 'Nova Pessoa' }}
+  </h2>
+
+  <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+    <div class="space-y-4">
+      <!-- Campo CPF (somente leitura) -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">CPF</label>
+        <input type="text" formControlName="cpf"
+               class="mt-1 block w-full rounded-md bg-gray-100 border-gray-300 shadow-sm"
+               readonly>
+      </div>
+
+      <!-- Nome -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Nome *</label>
+        <input type="text" formControlName="name" required
+               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm
+                      focus:border-blue-500 focus:ring-blue-500">
+      </div>
+
+      <!-- Status -->
+      <div class="flex gap-4">
+        <div class="flex items-center">
+          <input type="checkbox" formControlName="fined" id="fined"
+                 class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+          <label for="fined" class="ml-2 block text-sm text-gray-900">Multado</label>
+        </div>
+
+        <div class="flex items-center">
+          <input type="checkbox" formControlName="allowedBorrow" id="allowedBorrow"
+                 class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+          <label for="allowedBorrow" class="ml-2 block text-sm text-gray-900">Permitir Empréstimo</label>
+        </div>
+      </div>
+
+      <!-- Mensagens de erro -->
+      <div *ngIf="errorMessage" class="bg-red-100 text-red-700 p-4 rounded">
+        {{ errorMessage }}
+      </div>
+
+      <!-- Botões -->
+      <div class="flex justify-end space-x-4 mt-6">
+        <button type="button" (click)="cancel()"
+                class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300">
+          Cancelar
+        </button>
+        <button type="submit" [disabled]="isLoading"
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600
+                       disabled:bg-gray-400 disabled:cursor-not-allowed">
+          {{ isEditing ? 'Atualizar' : 'Criar' }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
