@@ -1,59 +1,70 @@
 # LibraryApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
 
-## Development server
 
-To start a local development server, run:
+![Logo of the project]![Image](https://github.com/user-attachments/assets/2877bd13-260e-4008-af89-d1bfa5615686)
 
-```bash
-ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## SpotCode
+This application is an managment of library made with Java Spring (Back end) and Angular (Front end) to loan books! Did on 2 days coding planning everything from scratch.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Technology 
 
-```bash
-ng generate component component-name
-```
+Here are the technologies used in this project.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* Angular version 19.2.8.
+* H2 
+* Swagger
 
-```bash
-ng generate --help
-```
+## Services Used
 
-## Building
+* Github
 
-To build the project run:
 
-```bash
-ng build
-```
+## Getting started
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* To install the Angular.
+  - npm install -g @angular/cli
+  - npm i
+  
+* To install tailwind.
+  - npm install tailwindcss @tailwindcss/postcss postcss --force
+  
+* To run the project.
+  - ng s
 
-## Running unit tests
+## How to use
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### 1 - When you access the project, you will see this initial page.
 
-```bash
-ng test
-```
+![Image](https://github.com/user-attachments/assets/fcbead2c-98dd-42b3-aa3b-7d87fbf03fe8)
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+### 2 - This is the pages!
 
-```bash
-ng e2e
-```
+![Image](https://github.com/user-attachments/assets/0940a22e-9bc1-4674-8e91-1d0f7028cc77)
+![Image](https://github.com/user-attachments/assets/e6696e86-3892-4ce3-a585-2b60b31c37c2)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+### 3 - This is the edit!
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Image](https://github.com/user-attachments/assets/457e9bdf-d858-485a-b6fc-f0429a93185f)
+
+## Features
+
+The main features of the application are:
+ - See registers
+ - Edit registers
+
+
+## Links
+  - Repository: https://github.com/noellepaes/library-app
+    - In case of sensitive bugs like security vulnerabilities, please contact
+      noellepaes12345@gmail.com directly instead of using issue tracker. We value your effort
+      to improve the security and privacy of this project!
+
+  ## Versioning
+
+  1.0.0.0
+
